@@ -32,6 +32,9 @@ public class Actor {
     @JsonIgnoreProperties("actors") // Añadido
     private List<Movie> movies;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date deadDate;
+
     public Actor() {
     }
 
@@ -78,6 +81,14 @@ public class Actor {
 
     public void setMovies(List<Movie> movies) {
         this.movies = movies;
+    }
+
+    public Date getDeadDate() {
+        return deadDate;
+    }
+
+    public void setDeadDate(Date deadDate) {
+        this.deadDate = deadDate;
     }
 
     @Override
